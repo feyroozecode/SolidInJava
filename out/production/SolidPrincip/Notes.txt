@@ -1,0 +1,33 @@
+
+1 - La class AreaCalculator utilise le Single Respinsability
+De ce fait elle fait une seul tache
+
+2 - La class AreaCalculator utiliese le "Open Closed " vue
+qu'elle ne ouvert que pour extension
+(Pour modifier une fonctionnaliter, interne de son fonctionement)
+mais fermer pour
+modification(pas de modification direct d'une fonctionnalites en dehors des fonctionnaliter interne de son fonctionnement)
+Ex: Utiliser un objet "Object" et convertir les object ou verifier avec "instaceof"
+Pas d'ajout de feature qui na rien avoir avec son fonctionnement
+Pas besoin recreer une class existante pour implementer des new features
+
+3 - Liskov Substritition :
+    Tout les class fille ou derivee doivent etre subsitutiable pour
+    leiur class de base ou parent, ainsi la class NoShape implement Shape
+    et retourne une exception pour les class non valide Shape
+    et aussi la class NoShape peut etre initilisez avec la class Shape qui est sa class de Base
+
+4 - Interface Segregation :
+     Pas besoin d'implementer des interface dont on a pas besoin a cause d'une class
+     derivante ayant besoin, on creer plutot des petit interface pour faire mieux .
+     Plutot donc creer une autre interface et implementer ces interface pour l'object qui en a besoin
+     dans cette exemple le Cube implemente l'interface du Shape qui a area comme method. Ce qui est normale vue que
+     les autre object Rectangle, Sqaure on besoin etc..
+     Mais en plus le Cube lui  implemente le Volume aussi . Pour pallier au problemes de repetion
+     au lieu d'utiliser le volume dans Shape ET l'appeler dans les autre classes derivante , on cree
+     une nouvelle interface et la fait implementer par le Cube qui en a besoin en plus de l'implementation de Shape .
+     Ce qui reduit des dependances unitles pour tout les object qui n'en non pas besoin
+     ON FORCE PAS ES CLASS A IMPLEMENTER CE DONT IL N'ON PAS BESOIN
+
+5 - Utilisation des dependency Injection avec la creation de l'interface
+     IAreaCalculator , et l'initialisation du AreaCalclator dans la class Main avec l'interface IAreacCalculator

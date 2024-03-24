@@ -1,0 +1,27 @@
+SOLID PRINCIPLES
+
+=> Single Responsibility Principle
+      Each class should have a single responsibility
+      and that responsibility should be entirely encapsulated
+      by the class. All its services should be narrowly
+      aligned with that responsibility.
+
+=> Open closed principle
+      Software entities should be open for extension
+      but closed for modification.
+
+=> Liskov substitution principle
+      Objects in a program should be replaceable with
+      instances of their subtypes without altering the
+      correctness of that program.
+
+ => Interface segregation principle
+      Interface should not force classes to implement what ther can't do
+      Large interfaces shoud be divided into small ones.
+      Or
+      Many client-specific interfaces are better than one
+      general-purpose interface.
+
+ => Dependency Inversion
+     Component shoud depend on abstractions
+     not on concretions.
